@@ -1,0 +1,1 @@
+export const HELP_DESCK_API: string 'http://localhost:8080';
