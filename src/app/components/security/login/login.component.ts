@@ -34,6 +34,7 @@ export class LoginComponent implements OnInit {
       this.shared.user = userAuthentication.user;
       this.shared.user.profile = this.shared.user.profile.substring(5);
       this.shared.showTemplate.emit(true);
+      console.log('usuario logao emit true');
       this.router.navigate(['/']);
     }, err => {
       this.shared.token = null;
@@ -48,6 +49,16 @@ export class LoginComponent implements OnInit {
     this.user = new User('','','','');
     window.location.href = '/login';
     window.location.reload();
+  }
+
+  getFormGroupClass(isInvalid: boolean, isDirty: boolean){
+
+    return{
+      'form-group' : true,
+      'has-error' : isInvalid && isDirty,
+      'has-succes' : !isInvalid && isDirty
+    }
+
   }
 
 
