@@ -19,4 +19,11 @@ export class AppComponent {
       show => this.showTemplate = show
     );
   }
+
+  showContentWrapper(){    
+    return {
+      'content-wrapper' : this.shared.isLoggedIn()
+    }
+  }
+
 }
