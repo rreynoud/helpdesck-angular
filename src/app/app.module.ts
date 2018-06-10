@@ -15,6 +15,7 @@ import { LoginComponent } from './components/security/login/login.component';
 import { routes } from './app.routes';
 
 import { FormsModule } from '@angular/forms';
+import { UserNewComponent } from './components/user-new/user-new.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     MenuComponent,
     FooterComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    UserNewComponent
   ],
   imports: [
     BrowserModule,
