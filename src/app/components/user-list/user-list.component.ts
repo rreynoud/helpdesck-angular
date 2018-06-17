@@ -13,7 +13,7 @@ import { Component, OnInit } from '@angular/core';
 export class UserListComponent implements OnInit {
 
   page:number=0;
-  count:number=5;
+  count:number=2;
   pages:Array<number>;
   shared : SharedService;
   message : {};
@@ -69,6 +69,28 @@ export class UserListComponent implements OnInit {
       }
     })
   }
+
+  setNextPage(event:any){
+    event.preventDefault();
+    if(this.page+1 < this.pages.length){
+      this.page = this.page + 1;
+      this.findAll(this.page, this.count);
+    }
+  }
+
+  setPreviousPage(event:any){
+    event.preventDefault();
+    if(this.page < 0){
+      this.page = this.page - 1;
+      this.findAll(this.page, this.count);
+    }
+  }  
+
+  setPage(i,event:any){
+    event.preventDefault();
+    this.page = i;
+    this.findAll(this.page, this.count);
+  }    
 
   private showMessage(message: {type: string, text : string}) : void {
     this.message = message;

@@ -19,6 +19,7 @@ export class UserNewComponent implements OnInit {
   form: NgForm
 
   user = new User('','','','');
+  
   shared : SharedService;
   message : {};
   classCss = {};
@@ -28,6 +29,7 @@ export class UserNewComponent implements OnInit {
     private route: ActivatedRoute
   ){
     this.shared = SharedService.getInstance();
+    this.user.id = null;
   }
 
   ngOnInit() {
