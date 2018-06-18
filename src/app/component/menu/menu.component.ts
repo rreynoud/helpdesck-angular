@@ -1,3 +1,4 @@
+import { SharedService } from './../../services/shared.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  shared: SharedService;
+
+  constructor() {
+    console.log('construtor');
+    this.shared = SharedService.getInstance();
+    console.log(this.shared.user);
+    console.log(this.shared);
+   }
 
   ngOnInit() {
   }
