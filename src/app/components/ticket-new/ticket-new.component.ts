@@ -27,8 +27,6 @@ export class TicketNewComponent implements OnInit {
     private route: ActivatedRoute
   ) { 
     this.shared = SharedService.getInstance();
-    console.log(this.shared.user);
-    console.log(this.shared);    
   }
 
   ngOnInit() {

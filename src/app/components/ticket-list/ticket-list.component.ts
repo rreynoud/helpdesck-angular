@@ -54,6 +54,10 @@ export class TicketListComponent implements OnInit {
     this.router.navigate(['/ticket-new',id]);
   }
 
+  detail(id: string){
+    this.router.navigate(['/ticket-detail',id])
+  }
+
   delete(id: string){
     this.dialogService.confirm('Do you want to delete the Ticket ?')
     .then((canDelete: boolean) => {

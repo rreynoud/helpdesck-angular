@@ -106,10 +106,10 @@
               <button class="btn btn-primary"  (click)="edit(ticket.id)" >Edit</button>
             </td>
             <td *ngIf="shared.user.profile == 'CUSTOMER'" >
-              <button class="btn btn-danger" (click)="edit(ticket.id)" >Delete</button>
+              <button class="btn btn-danger" (click)="delete(ticket.id)" >Delete</button>
             </td>
             <td>
-              <button class="btn btn-success" (click)="delete(ticket.id)" >Detail</button>
+              <button class="btn btn-success" (click)="detail(ticket.id)" >Detail</button>
             </td>
           </tr>          
         </table>
