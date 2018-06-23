@@ -44,7 +44,6 @@ export class TicketDetailComponent implements OnInit {
       });
   }  
 
-
   changeStatus(status):void{
     this.ticketService.changeStatus(status, this.ticket)
         .subscribe((responseApi: ResponseApi) => {
